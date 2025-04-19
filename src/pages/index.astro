@@ -16,13 +16,9 @@ const posts = await Astro.glob('./posts/*.{md,mdx}');
     </h1>
 
     <div class="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2">
-      <BlogPost />
-      <BlogPost />
-      <BlogPost />
-      <BlogPost />
-      <BlogPost />
-      <BlogPost />
-          
+      {
+        posts.map((post) => <BlogPost {... post} />)
+      }
     </div>
   </div>
 </section>
