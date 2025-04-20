@@ -7,11 +7,11 @@ import { glob } from 'astro/loaders';
 // 3. Define your collection(s)
 const blog = defineCollection({ 
   loader: glob({ pattern: '**/[^_]*.md', base: "./src/data/blog" }),
-  schema: z.object({
+  schema: ({ image }) => z.object({
     title: z.string(),
     date: z.date(),
     description: z.string(),
-    image: z.string(),
+    image: image(),
 
     //relacion
     author: z.string(),
