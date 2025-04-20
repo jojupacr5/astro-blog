@@ -8,7 +8,7 @@ image: '/assets/images/post-01.png'
 tags: [JavaScript, ES6, Programming]
 ---
 
-# { frontmatter.title }
+# Explorando Funciones de ES6
 
 <img src="/assets/images/post-01.png" width="350" alt="Explorando Funciones de ES6" />
 
