@@ -18,6 +18,9 @@ const blog = defineCollection({
 
     //relacion
     tags: z.array(z.string()),
+
+    //Boolean
+    isDraft: z.boolean().default(false),
   })
 });
 
@@ -25,7 +28,13 @@ const authors = defineCollection({
   loader: glob({ pattern: '**/[^_]*.yml', base: "./src/data/author" }),
   schema: ({ image }) => z.object({
     name: z.string(),
+    slug: z.string(),
     avatar: image(),
+    twitter: z.string(),
+    linkedIn: z.string(),
+    github: z.string(),
+    bio: z.string(),
+    subtitle: z.string(),
   })
 })
 
